@@ -120,7 +120,7 @@ const Quizs = styled.div`
   grid-row: 2;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 const QuizAnswers = styled.div`
@@ -146,11 +146,12 @@ const QuizAnswers = styled.div`
 const Title = styled.h1`
   width: 90%;
   height: 15%;
-  font-size: 34px;
+  font-size: 38px;
   line-height: 26px;
   font-weight: 600;
   text-align: center;
   color: white;
+  user-select: none;
 
   @media (max-width:1150px) {
     font-size: 26px;
@@ -164,18 +165,21 @@ const Title = styled.h1`
 const Question = styled.h1`
   width: 80%;
   height: 60%;
-  font-size: 30px;
-  line-height: 26px;
-  letter-spacing: 1px;
+  font-size: 34px;
+  line-height: 34px;
+  letter-spacing: 2px;
   font-weight: 600;
   text-align: center;
   color: white;
+  user-select: none;
 
   @media (max-width:1150px) {
     font-size: 24px;
   }
 
   @media (max-width:740px) {
+    line-height: 20px;
+    letter-spacing: 1px;
     font-size: 13px;
   }
 `
@@ -198,8 +202,10 @@ const AnswerText = styled.h1`
   }
 
   @media (max-width:740px) {
+    width: 96%;
     height: 80%;
-    font-size: 12px;
+    letter-spacing: normal;
+    font-size: 8px;
   }
   `
 
@@ -214,7 +220,7 @@ const AnswerBox = styled.div`
   cursor: pointer;
   transition: all 0.3s ease-in;
 
-  &:hover {
+  &:active {
     background: white;
 
     ${AnswerText} {
@@ -236,6 +242,7 @@ const Result = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   @media (max-width:1150px) {
     width: 600px;
