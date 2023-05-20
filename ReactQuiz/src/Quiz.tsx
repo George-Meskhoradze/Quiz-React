@@ -187,7 +187,7 @@ const Question = styled.h1`
 const AnswerText = styled.h1`
   width: 80%;
   height: 40%;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 20px;
   letter-spacing: 1px;
   color: white;
